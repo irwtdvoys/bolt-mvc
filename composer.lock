@@ -1,0 +1,64 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "2d60be51305f41f39129ce2f04e2d5c5",
+    "content-hash": "f9c4448357e7b1427127291cd4f8c9aa",
+    "packages": [
+        {
+            "name": "cruxoft/bolt-core",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/irwtdvoys/bolt-core.git",
+                "reference": "a101b443e49a6e26f7207a234f8af72877e79272"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/a101b443e49a6e26f7207a234f8af72877e79272",
+                "reference": "a101b443e49a6e26f7207a234f8af72877e79272",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Adams",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Core elements for the Bolt Framework",
+            "keywords": [
+                "bolt",
+                "framework"
+            ],
+            "time": "2016-04-04 10:19:32"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.6"
+    },
+    "platform-dev": []
+}

@@ -1,0 +1,27 @@
+{
+	"name": "cruxoft/bolt-mvc",
+	"description": "MVC module for Bolt",
+	"license": "Apache-2.0",
+	"keywords": [
+		"bolt",
+		"mvc",
+		"php"
+	],
+	"type": "library",
+	"authors": [
+		{
+			"name": "Steve Adams",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.6",
+		"cruxoft/bolt-core": "v0.1.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Bolt\\": "src/"
+		}
+	}
+}
+
