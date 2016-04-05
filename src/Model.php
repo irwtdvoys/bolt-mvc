@@ -10,7 +10,7 @@
 		public function __construct(Connection $connection, $data = null)
 		{
 			$className = $this->classname(false);
-			$className = "Bolt\\Adapters\\" . $className . "\\" . $connection->classname(false);
+			$className = "App\\Adapters\\" . $className . "\\" . $connection->classname(false);
 
 			$this->adapter = new $className($connection, $this);
 
