@@ -78,5 +78,10 @@
 
 			return true;
 		}
+
+		public function save()
+		{
+			return $this->adapter->save();
+		}
 	}
 ?>
