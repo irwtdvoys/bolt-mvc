@@ -67,7 +67,16 @@
 
 		public function load()
 		{
-			$this->populate($this->adapter->load());
+			$data = $this->adapter->load();
+
+			if ($data === false)
+			{
+				return false;
+			}
+
+			$this->populate($data);
+
+			return true;
 		}
 	}
 ?>
