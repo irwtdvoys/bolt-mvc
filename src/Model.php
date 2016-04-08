@@ -7,12 +7,15 @@
 	{
 		protected $adapter;
 
-		public function __construct(Connection $connection, $data = null)
+		public function __construct(Connection $connection = null, $data = null)
 		{
-			$className = $this->classname(false);
-			$className = "App\\Adapters\\" . $className . "\\" . $connection->classname(false);
+			if ($connection !== null)
+			{
+				$className = $this->classname(false);
+				$className = "App\\Adapters\\" . $className . "\\" . $connection->classname(false);
 
-			$this->adapter = new $className($connection, $this);
+				$this->adapter = new $className($connection, $this);
+			}
 
 			if ($data !== null)
 			{
