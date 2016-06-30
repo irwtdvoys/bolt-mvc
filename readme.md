@@ -1,1 +1,1 @@
-#bolt-mvc (v0.1.3)
+#bolt-mvc (v0.1.4)
