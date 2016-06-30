@@ -1,6 +1,9 @@
 <?php
 	namespace Bolt;
 
+	use ReflectionClass;
+	use ReflectionMethod;
+
 	abstract class Controller extends Base
 	{
 		public function __toString()
@@ -23,6 +26,26 @@
 			}
 
 			return $model;
+		}
+
+		protected function endpoints()
+		{
+			$class = new ReflectionClass($this->className(true));
+			$allMethods = $class->getMethods(ReflectionMethod::IS_PUBLIC);
+
+			$methods = array();
+
+			foreach ($allMethods as $next)
+			{
+				if ($next->name[0] == "_")
+				{
+					continue;
+				}
+
+				$methods[] = strtoupper($next->name);
+			}
+
+			return $methods;
 		}
 	}
 ?>
