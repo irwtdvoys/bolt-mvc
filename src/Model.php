@@ -9,18 +9,27 @@
 
 		public function __construct(Connection $connection = null, $data = null)
 		{
+			$this->adapter($connection);
+
+			if ($data !== null)
+			{
+				$this->populate($data);
+			}
+		}
+
+		public function adapter(Connection $connection = null)
+		{
 			if ($connection !== null)
 			{
 				$className = $this->classname(false);
 				$className = "App\\Adapters\\" . $className . "\\" . $connection->classname(false);
 
 				$this->adapter = new $className($connection, $this);
+
+				return true;
 			}
 
-			if ($data !== null)
-			{
-				$this->populate($data);
-			}
+			return $this->adapter;
 		}
 
 		public function toJson()

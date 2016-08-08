@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6c405c1c6ff7e1f7314d72689bd4dbcd",
-    "content-hash": "f9c4448357e7b1427127291cd4f8c9aa",
+    "hash": "79b1180b5a528d11a920574e5df7ceb9",
+    "content-hash": "03b73742e6c526ac40f2de1497295c60",
     "packages": [
         {
             "name": "cruxoft/bolt-core",
-            "version": "v0.1.3",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-core.git",
-                "reference": "e60c6352105944be1dc3728d6928556ca999094d"
+                "reference": "4267dc4f4433d079142327679c3d3a29f4ea513c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/e60c6352105944be1dc3728d6928556ca999094d",
-                "reference": "e60c6352105944be1dc3728d6928556ca999094d",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/4267dc4f4433d079142327679c3d3a29f4ea513c",
+                "reference": "4267dc4f4433d079142327679c3d3a29f4ea513c",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
                 "bolt",
                 "framework"
             ],
-            "time": "2016-04-05 10:53:59"
+            "time": "2016-08-02 08:37:46"
         }
     ],
     "packages-dev": [],
