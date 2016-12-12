@@ -22,7 +22,7 @@
 			if ($connection !== null)
 			{
 				$className = $this->classname(false);
-				$className = "App\\Adapters\\" . $className . "\\" . $connection->classname(false);
+				$className = "App\\Adapters\\Models\\" . $className . "\\" . $connection->classname(false);
 
 				$this->adapter = new $className($connection, $this);
 
