@@ -13,7 +13,7 @@
 
 			if ($data !== null)
 			{
-				$this->populate($data);
+				parent::__construct($data);
 			}
 		}
 
@@ -21,8 +21,8 @@
 		{
 			if ($connection !== null)
 			{
-				$className = $this->classname(false);
-				$className = "App\\Adapters\\Models\\" . $className . "\\" . $connection->classname(false);
+				$className = $this->className(false);
+				$className = "App\\Adapters\\Models\\" . $className . "\\" . $connection->className(false);
 
 				$this->adapter = new $className($connection, $this);
 
