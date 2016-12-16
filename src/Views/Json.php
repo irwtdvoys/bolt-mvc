@@ -41,7 +41,7 @@
 
 				return json_encode($results);
 			}
-			elseif ($type != "assoc" && get_class($content) != "stdClass")
+			elseif ($type != "assoc" && (is_object($content) && get_class($content) != "stdClass"))
 			{
 				return $content->toJson();
 			}

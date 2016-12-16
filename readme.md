@@ -1,1 +1,1 @@
-# bolt-mvc (v0.2.4)
+# bolt-mvc (v0.2.5)
