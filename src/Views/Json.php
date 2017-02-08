@@ -29,7 +29,7 @@
 
 				foreach ($content as $tmp)
 				{
-					if (Arrays::type($tmp) !== false || get_class($tmp) == "stdClass") // error here with arrays of string?
+					if (is_scalar($tmp) || Arrays::type($tmp) !== false || get_class($tmp) == "stdClass")
 					{
 						$results = $content;
 					}
