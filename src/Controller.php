@@ -37,7 +37,7 @@
 
 			foreach ($allMethods as $next)
 			{
-				if ($next->name[0] == "_")
+				if ($next->name[0] == "_" || in_array($next->name, array("endpoints", "className", "patchData")))
 				{
 					continue;
 				}
