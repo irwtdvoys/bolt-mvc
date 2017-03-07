@@ -28,7 +28,7 @@
 			return $model;
 		}
 
-		protected function endpoints()
+		public function endpoints()
 		{
 			$class = new ReflectionClass($this->className(true));
 			$allMethods = $class->getMethods(ReflectionMethod::IS_PUBLIC);
@@ -37,7 +37,7 @@
 
 			foreach ($allMethods as $next)
 			{
-				if ($next->name[0] == "_")
+				if ($next->name[0] == "_" || in_array($next->name, array("endpoints", "className", "patchData")))
 				{
 					continue;
 				}
