@@ -48,7 +48,19 @@
 
 		public function save()
 		{
-			return $this->adapter->save();
+			$data = $this->adapter->save();
+
+			if ($data === false)
+			{
+				return false;
+			}
+
+			if ($data !== true)
+			{
+				$this->populate($data);
+			}
+
+			return true;
 		}
 	}
 ?>
