@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cruxoft/bolt-core",
-            "version": "0.3.1",
+            "version": "0.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-core.git",
-                "reference": "5a62dd14550d8ce0bb59804e5e58f0c5154898ad"
+                "reference": "5e95e5677f238b1d67b1e10cc756f98fca76611d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/5a62dd14550d8ce0bb59804e5e58f0c5154898ad",
-                "reference": "5a62dd14550d8ce0bb59804e5e58f0c5154898ad",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/5e95e5677f238b1d67b1e10cc756f98fca76611d",
+                "reference": "5e95e5677f238b1d67b1e10cc756f98fca76611d",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
                 "bolt",
                 "framework"
             ],
-            "time": "2017-07-31T13:23:02+00:00"
+            "time": "2018-02-13T13:48:02+00:00"
         }
     ],
     "packages-dev": [],
