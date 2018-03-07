@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f1ef7becff32d7eca5c5daf07a33991",
+    "content-hash": "c8eeea7e43b6cb041e48341a809145e7",
     "packages": [
         {
             "name": "cruxoft/bolt-core",
-            "version": "0.3.4",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-core.git",
-                "reference": "5e95e5677f238b1d67b1e10cc756f98fca76611d"
+                "reference": "bd17fa15b3718e319d3813bf3988023934fc4ba7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/5e95e5677f238b1d67b1e10cc756f98fca76611d",
-                "reference": "5e95e5677f238b1d67b1e10cc756f98fca76611d",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/bd17fa15b3718e319d3813bf3988023934fc4ba7",
+                "reference": "bd17fa15b3718e319d3813bf3988023934fc4ba7",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
                 "bolt",
                 "framework"
             ],
-            "time": "2018-02-13T13:48:02+00:00"
+            "time": "2018-03-07T11:19:17+00:00"
         }
     ],
     "packages-dev": [],
@@ -56,8 +56,6 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "php": ">=5.6"
-    },
+    "platform": [],
     "platform-dev": []
 }
