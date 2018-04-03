@@ -10,7 +10,7 @@
 
 			foreach ($properties as $property)
 			{
-				$value = $this->{$property->name};
+				$value = $this->{$property};
 
 				if ($value !== null)
 				{
@@ -40,7 +40,7 @@
 
 					if ($value !== null)
 					{
-						$results[$property->name] = $value;
+						$results[$property] = $value;
 					}
 				}
 			}
