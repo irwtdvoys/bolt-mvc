@@ -15,7 +15,7 @@
 		}
 	],
 	"require": {
-		"cruxoft/bolt-core": "^v0.5"
+		"cruxoft/bolt-core": "^v0.6"
 	},
 	"autoload": {
 		"psr-4": {
