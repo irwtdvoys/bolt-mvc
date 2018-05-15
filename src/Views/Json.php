@@ -1,9 +1,10 @@
 <?php
 	namespace Bolt\Views;
 
-	use \Bolt\Base;
-	use \Bolt\Interfaces\View;
-	use \Bolt\Arrays;
+	use Bolt\Arrays;
+	use Bolt\Base;
+	use Bolt\Interfaces\View;
+	use Bolt\Outputable;
 
 	class Json extends Base implements View
 	{
@@ -43,7 +44,14 @@
 			}
 			elseif ($type != "assoc" && (is_object($content) && get_class($content) != "stdClass"))
 			{
-				return $content->toJson();
+				if ($content instanceof \Bolt\Outputable)
+				{
+					return $content->toJson();
+				}
+				else
+				{
+					return json_encode($content);
+				}
 			}
 			else
 			{
