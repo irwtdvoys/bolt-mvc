@@ -6,6 +6,7 @@
 	abstract class Model extends Base
 	{
 		protected $adapter;
+		protected $hash;
 
 		public function __construct(Connection $connection = null, $data = null)
 		{
@@ -48,6 +49,14 @@
 
 		public function save()
 		{
+			$hash = $this->calculateHash();
+
+			if ($hash === $this->hash())
+			{
+				// no save required
+				return true;
+			}
+
 			$data = $this->adapter->save();
 
 			if ($data === false)
@@ -60,7 +69,14 @@
 				$this->populate($data);
 			}
 
+			$this->hash($hash);
+
 			return true;
+		}
+
+		private function calculateHash()
+		{
+			return md5(Json::encode($this));
 		}
 	}
 ?>

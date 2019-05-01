@@ -4,7 +4,6 @@
 	use Bolt\Arrays;
 	use Bolt\Base;
 	use Bolt\Interfaces\View;
-	use Bolt\Outputable;
 
 	class Json extends Base implements View
 	{
@@ -36,26 +35,26 @@
 					}
 					else
 					{
-						$results[] = json_decode($tmp->toJson());
+						$results[] = \Bolt\Json::decode($tmp->toJson());
 					}
 				}
 
-				return json_encode($results);
+				return \Bolt\Json::encode($results);
 			}
 			elseif ($type != "assoc" && (is_object($content) && get_class($content) != "stdClass"))
 			{
-				if ($content instanceof \Bolt\Outputable || \method_exists($content, "toJson"))
+				if (in_array("Bolt\\Traits\\Outputable", array_keys(class_uses($content))) || method_exists($content, "toJson"))
 				{
 					return $content->toJson();
 				}
 				else
 				{
-					return json_encode($content);
+					return \Bolt\Json::encode($content);
 				}
 			}
 			else
 			{
-				return json_encode($content);
+				return \Bolt\Json::encode($content);
 			}
 		}
 	}
