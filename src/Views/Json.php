@@ -43,7 +43,7 @@
 			}
 			elseif ($type != "assoc" && (is_object($content) && get_class($content) != "stdClass"))
 			{
-				if ($content instanceof \Bolt\Outputable || \method_exists($content, "toJson"))
+				if (in_array("Bolt\\Traits\\Outputable", array_keys(class_uses($content))) || method_exists($content, "toJson"))
 				{
 					return $content->toJson();
 				}
