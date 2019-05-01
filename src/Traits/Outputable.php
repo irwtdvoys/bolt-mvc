@@ -1,6 +1,8 @@
 <?php
 	namespace Bolt\Traits;
 
+	use Bolt\Json;
+
 	trait Outputable
 	{
 		public function toJson()
@@ -10,7 +12,7 @@
 
 			foreach ($properties as $property)
 			{
-				$value = $this->{$property};
+				$value = $this->{$property}();
 
 				if ($value !== null)
 				{
@@ -20,7 +22,7 @@
 						{
 							if (is_object($element) && get_class($element) != "stdClass")
 							{
-								$element = json_decode($element->toJson());
+								$element = Json::decode($element->toJson());
 							}
 						}
 
@@ -34,7 +36,7 @@
 					{
 						if (get_class($value) != "stdClass")
 						{
-							$value = json_decode($value->toJson());
+							$value = Json::decode($value->toJson());
 						}
 					}
 
@@ -45,7 +47,7 @@
 				}
 			}
 
-			return json_encode($results);
+			return Json::encode($results);
 		}
 	}
 ?>

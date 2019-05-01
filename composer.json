@@ -15,7 +15,11 @@
 		}
 	],
 	"require": {
-		"cruxoft/bolt-core": "^v0.6"
+		"cruxoft/bolt-core": "^v0.6.0",
+		"cruxoft/bolt-json": "^0.2.0"
+	},
+	"require-dev": {
+		"cruxoft/dump": "^0.2.2"
 	},
 	"autoload": {
 		"psr-4": {
