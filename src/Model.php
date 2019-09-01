@@ -27,7 +27,7 @@
 
 				$this->adapter = new $className($connection, $this);
 
-				return true;
+				return $this;
 			}
 
 			return $this->adapter;
@@ -44,7 +44,7 @@
 
 			$this->populate($data);
 
-			return true;
+			return $this;
 		}
 
 		public function save()
@@ -54,7 +54,7 @@
 			if ($hash === $this->hash())
 			{
 				// no save required
-				return true;
+				return $this;
 			}
 
 			$data = $this->adapter->save();
@@ -71,7 +71,7 @@
 
 			$this->hash($hash);
 
-			return true;
+			return $this;
 		}
 
 		private function calculateHash()
