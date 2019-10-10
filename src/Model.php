@@ -1,6 +1,7 @@
 <?php
 	namespace Bolt;
 
+	use Bolt\Exceptions\Output;
 	use Bolt\Interfaces\Connection;
 
 	abstract class Model extends Base
@@ -39,7 +40,7 @@
 
 			if ($data === false)
 			{
-				return false;
+				throw new Output($this->className(false) . " not found", 404);
 			}
 
 			$this->populate($data);
@@ -61,7 +62,7 @@
 
 			if ($data === false)
 			{
-				return false;
+				throw new Output("Error saving " . $this->className(false), 500);
 			}
 
 			if ($data !== true)
