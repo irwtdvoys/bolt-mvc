@@ -1,4 +1,4 @@
-# bolt-mvc (v0.7.1)
+# bolt-mvc (v0.7.2)
 
 ## Roadmap
 
