@@ -2,12 +2,13 @@
 	namespace Bolt;
 
 	use Bolt\Exceptions\Output;
+	use Bolt\Interfaces\Adapter;
 	use Bolt\Interfaces\Connection;
 
 	abstract class Model extends Base
 	{
-		protected $adapter;
-		protected $hash;
+		protected Adapter $adapter;
+		protected string $hash;
 
 		public function __construct(Connection $connection = null, $data = null)
 		{
@@ -19,7 +20,7 @@
 			}
 		}
 
-		public function adapter(Connection $connection = null)
+		public function adapter(Connection $connection = null): Adapter
 		{
 			if ($connection !== null)
 			{
@@ -34,7 +35,7 @@
 			return $this->adapter;
 		}
 
-		public function load()
+		public function load(): self
 		{
 			$data = $this->adapter->load();
 
@@ -48,7 +49,7 @@
 			return $this;
 		}
 
-		public function save()
+		public function save(): self
 		{
 			$hash = $this->calculateHash();
 
@@ -75,7 +76,7 @@
 			return $this;
 		}
 
-		private function calculateHash()
+		private function calculateHash(): string
 		{
 			return md5(Json::encode($this));
 		}
