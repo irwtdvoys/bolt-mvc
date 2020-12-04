@@ -15,9 +15,9 @@
 		}
 	],
 	"require": {
-		"php": "^7.2.0",
-		"cruxoft/bolt-core": "^0.9.0",
-		"cruxoft/bolt-json": "^0.3.0"
+		"php": "^7.4",
+		"cruxoft/bolt-core": "0.10.1",
+		"ext-dom": "*"
 	},
 	"require-dev": {
 		"cruxoft/dump": "^0.2.2"
