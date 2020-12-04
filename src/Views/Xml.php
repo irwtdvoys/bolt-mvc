@@ -1,9 +1,9 @@
 <?php
 	namespace Bolt\Views;
 
-	use \Bolt\Base;
-	use \Bolt\Interfaces\View;
-	use \Bolt\Arrays;
+	use Bolt\Arrays;
+	use Bolt\Base;
+	use Bolt\Interfaces\View;
 	use DOMDocument;
 
 	class Xml extends Base implements View
