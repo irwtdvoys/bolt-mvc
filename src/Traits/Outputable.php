@@ -5,7 +5,7 @@
 
 	trait Outputable
 	{
-		public function toJson()
+		public function toJson(): string
 		{
 			$results = null;
 			$properties = $this->getProperties();

@@ -6,8 +6,8 @@
 
 	abstract class Model extends Base
 	{
-		protected $adapter;
-		protected $hash;
+		protected ?Adapter $adapter = null;
+		protected string $hash;
 
 		public function __construct(Connection $connection = null, $data = null)
 		{
@@ -34,7 +34,7 @@
 			return $this->adapter;
 		}
 
-		public function load()
+		public function load(): self
 		{
 			$data = $this->adapter->load();
 
@@ -48,7 +48,7 @@
 			return $this;
 		}
 
-		public function save()
+		public function save(): self
 		{
 			$hash = $this->calculateHash();
 
@@ -75,7 +75,7 @@
 			return $this;
 		}
 
-		private function calculateHash()
+		private function calculateHash(): string
 		{
 			return md5(Json::encode($this));
 		}
