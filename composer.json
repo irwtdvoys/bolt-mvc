@@ -16,7 +16,7 @@
 	],
 	"require": {
 		"php": "^7.4",
-		"cruxoft/bolt-core": "0.10.1",
+		"cruxoft/bolt-core": "^0.10.0",
 		"ext-dom": "*"
 	},
 	"require-dev": {
@@ -24,7 +24,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Bolt\\": "src/"
+			"Bolt\\": "src/",
+			"App\\": "app/"
 		}
 	}
 }

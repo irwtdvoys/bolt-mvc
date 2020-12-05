@@ -2,12 +2,11 @@
 	namespace Bolt;
 
 	use Bolt\Exceptions\Output;
-	use Bolt\Interfaces\Adapter;
 	use Bolt\Interfaces\Connection;
 
 	abstract class Model extends Base
 	{
-		protected Adapter $adapter;
+		protected ?Adapter $adapter = null;
 		protected string $hash;
 
 		public function __construct(Connection $connection = null, $data = null)
@@ -20,7 +19,7 @@
 			}
 		}
 
-		public function adapter(Connection $connection = null): Adapter
+		public function adapter(Connection $connection = null)
 		{
 			if ($connection !== null)
 			{

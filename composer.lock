@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "13eb085f56d16a80e59859aa32d6ade6",
+    "content-hash": "bc546c0418c72030122ddefcc1a724b1",
     "packages": [
         {
             "name": "cruxoft/bolt-core",
-            "version": "0.10.1",
+            "version": "0.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-core.git",
-                "reference": "0aac900f991af6c74708fbda037997c49447d58a"
+                "reference": "9dc5691f062b5298c728d949fc7361614e04771b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/0aac900f991af6c74708fbda037997c49447d58a",
-                "reference": "0aac900f991af6c74708fbda037997c49447d58a",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/9dc5691f062b5298c728d949fc7361614e04771b",
+                "reference": "9dc5691f062b5298c728d949fc7361614e04771b",
                 "shasum": ""
             },
             "require": {
@@ -50,9 +50,9 @@
             ],
             "support": {
                 "issues": "https://github.com/irwtdvoys/bolt-core/issues",
-                "source": "https://github.com/irwtdvoys/bolt-core/tree/0.10.1"
+                "source": "https://github.com/irwtdvoys/bolt-core/tree/0.10.3"
             },
-            "time": "2020-12-04T22:41:38+00:00"
+            "time": "2020-12-05T19:55:50+00:00"
         },
         {
             "name": "cruxoft/bolt-support",
@@ -154,7 +154,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2.0"
+        "php": "^7.4",
+        "ext-dom": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
