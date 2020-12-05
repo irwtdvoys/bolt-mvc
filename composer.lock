@@ -4,23 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a55eb37ce1c4bfcf588494aa1597632",
+    "content-hash": "bc546c0418c72030122ddefcc1a724b1",
     "packages": [
         {
             "name": "cruxoft/bolt-core",
-            "version": "0.9.1",
+            "version": "0.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-core.git",
-                "reference": "e49baa3a8ab8616e80d14316b843296d9ebb2c14"
+                "reference": "9dc5691f062b5298c728d949fc7361614e04771b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/e49baa3a8ab8616e80d14316b843296d9ebb2c14",
-                "reference": "e49baa3a8ab8616e80d14316b843296d9ebb2c14",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/9dc5691f062b5298c728d949fc7361614e04771b",
+                "reference": "9dc5691f062b5298c728d949fc7361614e04771b",
                 "shasum": ""
             },
             "require": {
+                "cruxoft/bolt-support": "^0.3.0",
                 "php": "^7"
             },
             "require-dev": {
@@ -47,29 +48,33 @@
                 "bolt",
                 "framework"
             ],
-            "time": "2020-01-23T11:35:48+00:00"
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-core/issues",
+                "source": "https://github.com/irwtdvoys/bolt-core/tree/0.10.3"
+            },
+            "time": "2020-12-05T19:55:50+00:00"
         },
         {
-            "name": "cruxoft/bolt-json",
-            "version": "0.3.2",
+            "name": "cruxoft/bolt-support",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/irwtdvoys/bolt-json.git",
-                "reference": "be887c8162dd031923b471c5281b1c1c9816b4e6"
+                "url": "https://github.com/irwtdvoys/bolt-support.git",
+                "reference": "7703d52ec6a282b3a6f9f909ef08aa6ea9d94195"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-json/zipball/be887c8162dd031923b471c5281b1c1c9816b4e6",
-                "reference": "be887c8162dd031923b471c5281b1c1c9816b4e6",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-support/zipball/7703d52ec6a282b3a6f9f909ef08aa6ea9d94195",
+                "reference": "7703d52ec6a282b3a6f9f909ef08aa6ea9d94195",
                 "shasum": ""
             },
             "require": {
-                "cruxoft/bolt-core": "^0.9.0",
                 "ext-json": "*",
-                "php": "^7"
+                "php": "^7.4"
             },
             "require-dev": {
-                "cruxoft/dump": "^0.2.0"
+                "cruxoft/dump": "^0.2",
+                "phpunit/phpunit": "^9.4"
             },
             "type": "library",
             "autoload": {
@@ -87,12 +92,15 @@
                     "role": "Developer"
                 }
             ],
-            "description": "JSON wrapper library built on the Bolt Framework",
+            "description": "Standalone support library for the Bolt Framework",
             "keywords": [
-                "bolt",
-                "json"
+                "bolt"
             ],
-            "time": "2020-01-23T11:47:19+00:00"
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-support/issues",
+                "source": "https://github.com/irwtdvoys/bolt-support/tree/0.3.0"
+            },
+            "time": "2020-11-11T22:31:16+00:00"
         }
     ],
     "packages-dev": [
@@ -133,6 +141,10 @@
                 }
             ],
             "description": "A system for generating structure information about nested variables for use including screen display",
+            "support": {
+                "issues": "https://github.com/irwtdvoys/dump/issues",
+                "source": "https://github.com/irwtdvoys/dump/tree/master"
+            },
             "time": "2018-03-14T14:14:53+00:00"
         }
     ],
@@ -142,7 +154,9 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2.0"
+        "php": "^7.4",
+        "ext-dom": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }

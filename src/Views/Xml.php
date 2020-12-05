@@ -1,20 +1,21 @@
 <?php
 	namespace Bolt\Views;
 
-	use \Bolt\Base;
-	use \Bolt\Interfaces\View;
-	use \Bolt\Arrays;
+	use Bolt\Arrays;
+	use Bolt\Base;
+	use Bolt\Interfaces\View;
+	use DOMDocument;
 
 	class Xml extends Base implements View
 	{
-		protected $dom;
+		protected DOMDocument $dom;
 
 		public function __construct()
 		{
-			$this->dom = new \DOMDocument("1.0", "utf-8");
+			$this->dom = new DOMDocument("1.0", "utf-8");
 		}
 
-		public function render($content)
+		public function render($content): void
 		{
 			header("Content-type: text/xml");
 
@@ -33,7 +34,7 @@
 			echo($this->dom->saveXML());
 		}
 
-		private function handleObject($content)
+		private function handleObject($content): void
 		{
 			$class = get_class($content);
 			$nodeName = ($class != "stdClass" && $class !== false) ? $content->className(false) : "root";

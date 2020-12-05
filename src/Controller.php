@@ -11,7 +11,7 @@
 			return "API Object: " . $this->className();
 		}
 
-		public function endpoints()
+		public function endpoints(): array
 		{
 			$class = new ReflectionClass($this->className(true));
 			$allMethods = $class->getMethods(ReflectionMethod::IS_PUBLIC);
